@@ -117,8 +117,20 @@ body {
     border: 2px solid white;
 }
 .section-news {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     border: 2px solid white;
+}
+.news-date {
+    color: white;
+}
+.news-title {
+    color: white;
+}
+.news-content {
+    color: white;
 }
 .section-contacts {
 
