@@ -45,6 +45,9 @@ body {
     color: #fff;
 }
 /*Main*/
+.section {
+    padding: 0 50px;
+}
 .section-title {
     margin: 0;
     font-family: 'Merriweather', serif;
@@ -111,11 +114,36 @@ body {
     color: #BDAE82;
     cursor: pointer;
 }
-
+/*links*/
 .section-links {
-
+    display: flex;
+    flex-direction: column;
     border: 2px solid white;
 }
+.links-title {
+    align-self: center;
+}
+.link-container {
+    border-bottom: 2px solid #BDAE82;
+}
+.link-description {
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 40px;
+    color: #fff;
+}
+.link {
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 40px;
+    color: #fff;
+    text-decoration: none;
+}
+
 .section-news {
     display: flex;
     flex-direction: column;
