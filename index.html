@@ -6,6 +6,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <script type="module" src="./js/index.js"></script>
   <title>Portfolio</title>
 </head>
 <body>
@@ -13,17 +14,17 @@
     <div class="container header-container">
       <nav class="nav">
         <ul class="nav-list">
-          <li class="nav-item"><a href="#cv" class="nav-link">CV</a></li>
-          <li class="nav-item"><a href="#links" class="nav-link">Links</a></li>
-          <li class="nav-item"><a href="#news" class="nav-link">News</a></li>
-          <li class="nav-item"><a href="#contacts" class="nav-link">Contacts</a></li>
+          <li class="nav-item"><a href="#cv" class="nav-link" data-i18n = "cv">CV</a></li>
+          <li class="nav-item"><a href="#links" class="nav-link" data-i18n = "links">Links</a></li>
+          <li class="nav-item"><a href="#news" class="nav-link" data-i18n = "news">News</a></li>
+          <li class="nav-item"><a href="#contacts" class="nav-link" data-i18n = "contacts">Contacts</a></li>
         </ul>
       </nav>
 
-      <select name="" id="">
-        <option value="por">por</option>
-        <option value="eng">eng</option>
-        <option value="rus">rus</option>
+      <select class="lang-list" id="">
+        <option class="lang-list__item" value="POR">POR</option>
+        <option class="lang-list__item" value="ENG">ENG</option>
+        <option class="lang-list__item" value="RUS">RUS</option>
       </select>
       
     </div>
@@ -31,20 +32,20 @@
   <main class="main">
     <div class="container main-container">
       <section id="summary" class="section-summary">
-        <h1 class="section-title main-title">Kristina Balykova</h1>
+        <h1 class="section-title main-title"  data-i18n = "hero-title">Kristina Balykova</h1>
       </section>
       <section id="cv" class="section section-cv">
-        <h2 class="section-title">CV</h2>
+        <h2 class="section-title"  data-i18n = "cv">CV</h2>
         <form method="get" action="./assets/docs/cv-balykova-kristina.docx">
-          <button class="button download-button">Download</button>
+          <button class="button download-button" data-i18n = "download">Download</button>
         </form>
         <details class="cv-container">
-          <summary class="cv-title">Show CV</summary>
+          <summary class="cv-title" data-i18n = "show-cv">Show CV</summary>
           <embed class="cv-preview" src="./assets/docs/cv-balykova-kristina.pdf" type="application/pdf">
         </details>
       </section>
       <section id="links" class="section section-links">
-        <h2 class="section-title links-title">Links</h2>
+        <h2 class="section-title links-title" data-i18n = "links">Links</h2>
         <div class="link-container">
           <p class="link-description">
             The Guató Collection of Kristina Balykova and Gustavo Godoy | The Archive of the Indigenous Languages of Latin America
@@ -85,7 +86,7 @@
         </div>
       </section>
       <article id="news" class="section section-news">
-        <h2 class="section-title">News</h2>
+        <h2 class="section-title" data-i18n = "news">News</h2>
         <section class="main-news">
           <article class="new-news">
             <time class="news-date" datetime="2022-01-05 00:28">5 января</time>
@@ -107,7 +108,7 @@
         </section>
       </article>
       <section id="contacts" class="section section-contacts">
-        <h2 class="section-title">Contacts</h2>
+        <h2 class="section-title" data-i18n = "contacts">Contacts</h2>
       </section>
     </div>
   </main>
