@@ -12,3 +12,7 @@ function getTranslate() {
     element.textContent = i18Obj[lang.value][element.dataset.i18n]
     })
 }
+
+function getTran() {
+
+}

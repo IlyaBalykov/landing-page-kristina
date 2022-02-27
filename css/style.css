@@ -11,7 +11,7 @@ body {
     min-height: 100vh;
     padding: 0;
     margin: 0;
-    background-color: #000;
+    background-color: #fff;
 }
 .container {
     max-width: 1440px;
@@ -42,7 +42,7 @@ body {
     font-size: 20px;
     line-height: 50px;
     text-decoration: none;
-    color: #fff;
+    color: black
 }
 /*Main*/
 .section {
@@ -55,13 +55,13 @@ body {
     font-weight: bold;
     font-size: 40px;
     line-height: 80px;
-    color: #BDAE82
+    color: black
 }
 /*section-summary*/
 .section-summary {
     height: 820px;
 
-    border: 2px solid white;
+    border: 2px solid black;
 }
 .main-title {
     font-family: 'Merriweather', serif;
@@ -69,7 +69,7 @@ body {
     font-weight: bold;
     font-size: 60px;
     line-height: 120px;
-    color: #fff;
+    color: black;
 }
 .section-cv {
     display: flex;
@@ -77,7 +77,7 @@ body {
     align-items: center;
     min-width: 794px;
 
-    border: 2px solid white;
+    border: 2px solid black;
 }
 .cv-container {
     width: 100%;
@@ -93,7 +93,7 @@ body {
     font-size: 20px;
     line-height: 40px;
     color: #BDAE82;
-    background-color: #000;
+    background-color: black;
 }
 .button:hover {
     border: none;
@@ -111,20 +111,20 @@ body {
     font-weight: normal;
     font-size: 20px;
     line-height: 50px;
-    color: #BDAE82;
+    color: black;
     cursor: pointer;
 }
 /*links*/
 .section-links {
     display: flex;
     flex-direction: column;
-    border: 2px solid white;
+    border: 2px solid black;
 }
 .links-title {
     align-self: center;
 }
 .link-container {
-    border-bottom: 2px solid #BDAE82;
+    border-bottom: 2px solid black;
 }
 .link-description {
     font-family: Inter, sans-serif;
@@ -132,7 +132,7 @@ body {
     font-weight: normal;
     font-size: 20px;
     line-height: 40px;
-    color: #fff;
+    color: black;
 }
 .link {
     font-family: Inter, sans-serif;
@@ -140,7 +140,7 @@ body {
     font-weight: normal;
     font-size: 20px;
     line-height: 40px;
-    color: #fff;
+    color: black;
     text-decoration: none;
 }
 
@@ -149,21 +149,28 @@ body {
     flex-direction: column;
     align-items: center;
 
-    border: 2px solid white;
+    border: 2px solid black;
 }
 .news-date {
-    color: white;
+    color: black;
 }
 .news-title {
-    color: white;
+    color: black;
 }
 .news-content {
-    color: white;
+    color: black;
+}
+.section-translations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border: 2px solid black;
 }
 .section-contacts {
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    border: 2px solid white;
+    border: 2px solid black;
 }
