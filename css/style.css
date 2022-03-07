@@ -142,7 +142,15 @@ body {
 .links-title {
     align-self: center;
 }
+.link-icon {
+    width: 64px;
+    height: 64px;
+}
 .link-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 10px;
     border-bottom: 2px solid black;
 }
 .link-description {
