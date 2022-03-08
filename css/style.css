@@ -101,6 +101,7 @@ body {
     font-weight: normal;
     font-size: 16px;
     line-height: 20px;
+    text-align: center;
     color: black;
 }
 .hero-about {
@@ -216,6 +217,12 @@ body {
     font-weight: normal;
     font-size: 20px;
     line-height: 40px;
+}
+.news-date {
+    font-style: italic;
+}
+.news-content {
+    text-align: justify;
 }
 
 .section-translations {
