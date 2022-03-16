@@ -11,6 +11,8 @@ const i18Obj = {
     'hero-about-additionally': 'I was born in Yoshkar-Ola, Russia. In 2011, I moved to Brazil.',
     'download': 'Download',
     'show-cv': 'Show CV',
+    'translation-1': 'Desenhos corporais dos índios Kadiweu (Brasil)',
+    'translation-2': 'Os Guató e a sua região',
   },
   'POR': {
     'cv': 'CV',
@@ -24,6 +26,8 @@ const i18Obj = {
     'hero-about-additionally': 'I was born in Yoshkar-Ola, Russia. In 2011, I moved to Brazil.',
     'download': 'Download',
     'show-cv': 'Mostrar currículo',
+    'translation-1': 'Desenhos corporais dos índios Kadiweu (Brasil)',
+    'translation-2': 'Os Guató e a sua região',
   },
   'RUS': {
     'cv': 'Резюме',
@@ -37,6 +41,8 @@ const i18Obj = {
     'hero-about-additionally': 'I was born in Yoshkar-Ola, Russia. In 2011, I moved to Brazil.',
     'download': 'Загрузить',
     'show-cv': 'Показать резюме',
+    'translation-1': 'Desenhos corporais dos índios Kadiweu (Brasil)',
+    'translation-2': 'Os Guató e a sua região',
   }
 }
 export default i18Obj;

@@ -129,7 +129,8 @@ body {
     align-items: center;
     border: 2px solid black;
 }
-.cv-container {
+.cv-container,
+.translation-container {
     width: 100%;
     text-align: center;
 }
@@ -151,11 +152,13 @@ body {
     color: #000;
     cursor: pointer;
 }
-.cv-preview {
+.cv-preview,
+.translation-preview {
     width: 100%;
     height: 900px;
 }
-.cv-details {
+.cv-details,
+.translation-details{
     font-family: var(--content-font);
     font-style: normal;
     font-weight: normal;
@@ -199,7 +202,7 @@ body {
     font-size: 20px;
     line-height: 30px;
     color: black;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .section-news {
