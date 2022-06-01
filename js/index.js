@@ -1,3 +1,6 @@
+//nodemon - for reset server when any file is changed
+//mongoose - for easy fork with mongodb
+
 import i18Obj from "./translate.js";
 
 const dataAttr = document.querySelectorAll('[data-i18n]')
