@@ -22,27 +22,32 @@ const dataAttr = document.querySelectorAll('[data-i18n]');
 const lang = document.querySelector('.lang-list');
 
 const form = document.getElementById('form');
-const inputNewsTitle = form.querySelector('#inputNewsTitle');
 const inputNewsContent = form.querySelector('#inputNewsContent');
 const submitBtn = form.querySelector('#submit');
 
 form.addEventListener('submit', submitNews);
 
 function submitNews(event) {
+  const date = new Date()
   event.preventDefault();
   const news = {
-      title: inputNewsTitle.value.trim(),
       content: inputNewsContent.value,
-      date: new Date().toJSON()
+      date: (`${date.getMonth()} - ${date.getDay()} - ${date.getFullYear()}`)
   }
   submitBtn.disabled = true;
   News.create(news).then(() => {
-    inputNewsTitle.value = '';
     inputNewsContent.value = '';
     submitBtn.disabled = false;
   }) //can use create() method, because in news we use static
+
+  News.get().then(() => {
+    console.log('Новость отправлена на сервер!');
+  });
 }
-window.onload = getTranslate
+window.onload = function () {
+  getTranslate();
+  News.get().then(() => console.log('Новости загружены!'));
+}
 lang.addEventListener('change', getTranslate)
 
 function getTranslate() {
