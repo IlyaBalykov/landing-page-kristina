@@ -28,11 +28,10 @@ const submitBtn = form.querySelector('#submit');
 form.addEventListener('submit', submitNews);
 
 function submitNews(event) {
-  const date = new Date()
   event.preventDefault();
   const news = {
       content: inputNewsContent.value,
-      date: (`${date.getMonth()} - ${date.getDay()} - ${date.getFullYear()}`)
+      date: new Date()
   }
   submitBtn.disabled = true;
   News.create(news).then(() => {

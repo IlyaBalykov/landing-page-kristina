@@ -32,7 +32,7 @@ export class News {
             
             time.className = "news-date";
             time.setAttribute('datetime', `${newsList[newsId].date}` )
-            time.textContent = newsList[newsId].date;
+            time.textContent = `${new Date(newsList[newsId].date).toLocaleDateString()}`;
             
             content.className = "news-content"
             content.textContent = newsList[newsId].content;
