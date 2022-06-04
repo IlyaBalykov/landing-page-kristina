@@ -15,7 +15,7 @@ window.onload = function () {
   getTranslate();
   News.get().then(() => {
     console.log('Новости загружены!')
-    if(sessionStorage.getItem("userToken")) {
+  if(sessionStorage.getItem("userToken") !== undefined) {
       renderAdminElements()
     }
   });
@@ -28,9 +28,13 @@ export function authFormHandler(event) {
 
   authWithEmailAndPassword(email ,password)
     .then(token => {
-      sessionStorage.setItem("userToken", token);
-      Modal.removeModal();
-      renderAdminElements();
+      if(token !== undefined) {
+        sessionStorage.setItem("userToken", token);
+        Modal.removeModal();
+        renderAdminElements();
+      } else {
+        alert("Невенрный логин или пароль");
+      }
     })
 }
 
