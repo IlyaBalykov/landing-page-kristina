@@ -1,17 +1,83 @@
 import { News } from "./News.js";
+import { userToken } from "./index.js";
 
 export function renderAdminElements() {
-  const newsContainer = document.querySelectorAll('.new-news');
+  const newsContainer = document.getElementById('news');
+  const newsList = newsContainer.querySelectorAll('.new-news');
+  const newsForm = document.createElement("form");
 
-  newsContainer.forEach(element => {
-    const removeBtn = document.createElement('button');
+  //Show user menu
+
+  showUserMenu()
+
+  // Add remove btn
+  newsList.forEach(element => {
+    const removeBtn = document.createElement("button");
 
     removeBtn.classList.add('news__delete-btn');
-    removeBtn.textContent = 'Remove';
+    removeBtn.textContent = 'Remove'
+
     element.append(removeBtn);
-    
-    removeBtn.addEventListener('click', deleteNews )
+
+
+    removeBtn.addEventListener('click', deleteNews)
   })
+
+  // Add area for make news
+  newsForm.id = "form";
+  newsForm.classList.add("news__input-form");
+  newsContainer.append(newsForm);
+
+  newsForm.innerHTML = renderNewsForm()
+
+  function renderNewsForm() {
+    return `
+        <label for="inputNewsContent">Новость</label>
+          <textarea id="inputNewsContent" rows="8"></textarea>
+<!--          !TODO make "Learn more" link for news source-->
+          <input id="submit-news" type="submit" value = "Опубликовать">
+    `
+  }
+
+  const form = document.getElementById('form');
+
+  form.addEventListener('submit', submitNews);
+}
+  // Create user menu
+export function showUserMenu() {
+    const headerContainer = document.querySelector(".header-container");
+    const loginBtn = document.getElementById("login-btn");
+    const loginMenu = document.createElement("div");
+
+    loginBtn.textContent = "Log out";
+    
+}
+
+export function hideUserMenu() {
+  const headerContainer = document.querySelector(".header-container");
+  const loginBtn = document.getElementById("login-btn");
+  const loginMenu = document.createElement("div");
+
+  loginBtn.value = "Log in";
+}
+
+function submitNews(event) {
+  const inputNewsContent = document.getElementById('inputNewsContent');
+  const submitBtn = document.getElementById('submit-news');
+  event.preventDefault();
+  const news = {
+    content: inputNewsContent.value,
+    date: new Date()
+  }
+  submitBtn.disabled = true;
+  News.create(news, userToken).then(() => {
+    inputNewsContent.value = '';
+    submitBtn.disabled = false;
+  }) //can use create() method, because in news we use static
+
+  News.get().then(() => {
+    console.log('Новость отправлена на сервер!');
+  });
 }
 
 function deleteNews(event) {
