@@ -4,6 +4,7 @@ import { Modal } from "./Modal.js";
 import { hideUserMenu, renderAdminElements } from "./admin.js";
 import { authWithEmailAndPassword } from "./auth.js";
 
+
 const dataAttr = document.querySelectorAll('[data-i18n]');
 const lang = document.querySelector('.lang-list');
 const loginBth = document.getElementById('login-btn');
