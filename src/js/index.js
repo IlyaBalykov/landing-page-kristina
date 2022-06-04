@@ -15,7 +15,7 @@ window.onload = function () {
   getTranslate();
   News.get().then(() => {
     console.log('Новости загружены!')
-  if(sessionStorage.getItem("userToken") !== undefined) {
+  if(sessionStorage.getItem("userToken") && (sessionStorage.getItem("userToken") !== undefined)) {
       renderAdminElements()
     }
   });
