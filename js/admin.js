@@ -15,7 +15,7 @@ export function renderAdminElements() {
     const removeBtn = document.createElement("button");
 
     removeBtn.classList.add('news__delete-btn');
-    removeBtn.textContent = 'Remove'
+    removeBtn.textContent = "Удалить";
 
     element.append(removeBtn);
 
@@ -34,7 +34,6 @@ export function renderAdminElements() {
     return `
         <label for="inputNewsContent">Новость</label>
           <textarea id="inputNewsContent" rows="8"></textarea>
-<!--          !TODO make "Learn more" link for news source-->
           <input id="submit-news" type="submit" value = "Опубликовать">
     `
   }
@@ -57,8 +56,9 @@ export function hideUserMenu() {
   const headerContainer = document.querySelector(".header-container");
   const loginBtn = document.getElementById("login-btn");
   const loginMenu = document.createElement("div");
-
+  sessionStorage.removeItem("userToken");
   loginBtn.value = "Log in";
+  location.reload();
 }
 
 function submitNews(event) {
@@ -77,9 +77,12 @@ function submitNews(event) {
 
   News.get().then(() => {
     console.log('Новость отправлена на сервер!');
+    window.location.reload();
   });
 }
 
 function deleteNews(event) {
-  News.delete(event).then()
+  News.delete(event).then(() => {
+    window.location.reload();
+  })
 }
