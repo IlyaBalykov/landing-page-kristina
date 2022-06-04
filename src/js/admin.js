@@ -1,5 +1,4 @@
 import { News } from "./News.js";
-import { userToken } from "./index.js";
 
 export function renderAdminElements() {
   const newsContainer = document.getElementById('news');
@@ -70,7 +69,7 @@ function submitNews(event) {
     date: new Date()
   }
   submitBtn.disabled = true;
-  News.create(news, userToken).then(() => {
+  News.create(news).then(() => {
     inputNewsContent.value = '';
     submitBtn.disabled = false;
   }) //can use create() method, because in news we use static

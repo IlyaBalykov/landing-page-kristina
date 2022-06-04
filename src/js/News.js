@@ -1,4 +1,3 @@
-// import {response} from "express";
 export class News {
     static create(news) {
         const userToken = sessionStorage.getItem("userToken");

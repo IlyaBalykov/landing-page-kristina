@@ -9,8 +9,6 @@ const dataAttr = document.querySelectorAll('[data-i18n]');
 const lang = document.querySelector('.lang-list');
 const loginBth = document.getElementById('login-btn');
 
-export let userToken = "";
-
 loginBth.addEventListener('click', loginAction);
 
 window.onload = function () {
@@ -18,10 +16,7 @@ window.onload = function () {
   News.get().then(() => {
     console.log('Новости загружены!')
     if(sessionStorage.getItem("userToken")) {
-      userToken = sessionStorage.getItem("userToken")
       renderAdminElements()
-    } else {
-      userToken = "";
     }
   });
 }
@@ -33,7 +28,6 @@ export function authFormHandler(event) {
 
   authWithEmailAndPassword(email ,password)
     .then(token => {
-      userToken = token;
       sessionStorage.setItem("userToken", token);
       Modal.removeModal();
       renderAdminElements();
@@ -50,7 +44,7 @@ function getTranslate() {
 }
 
 function loginAction () {
-  userToken? hideUserMenu():Modal.showAuth();
+  sessionStorage.getItem("userToken")? hideUserMenu():Modal.showAuth();
 }
 
 // TODO update page when News.submit or News.delete
