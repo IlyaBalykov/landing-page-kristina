@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Open+Sans&display=swap" rel="stylesheet">
-  <script type="module" src="./js/index.js"></script>
+  <script type="module" src="src/jsjs"></script>
   <title><%= htmlWebpackPlugin.options.title %</title>
 </head>
 <body>
@@ -37,7 +37,7 @@
     <div class="container main-container">
       <section id="summary" class="section section-summary">
         <figure class="image-container">
-          <img class="image-container__image"src="./assets/img/hero.jpg" alt="Kristina Balykova">
+          <img class="image-container__image" src="assets/img/hero.jpg" alt="Kristina Balykova">
           <figcaption class="image-container__sign" data-i18n = "image-sign">Vicente da Silva, one of the last Guató speakers, and I at Vicente's residence, July 2019</figcaption>
         </figure>
         <div class="hero-about">
@@ -50,18 +50,18 @@
       </section>
       <section id="cv" class="section section-cv">
         <h2 class="section-title"  data-i18n = "cv">CV</h2>
-        <form method="get" action="./assets/docs/cv-balykova-kristina.pdf">
+        <form method="get" action="assets/docs/cv-balykova-kristina.pdf">
           <button class="button download-button" data-i18n = "download">Download</button>
         </form>
         <details class="cv-container">
           <summary class="cv-details" data-i18n = "show-cv">Show CV</summary>
-          <embed class="cv-preview" src="./assets/docs/cv-balykova-kristina.pdf" type="application/pdf">
+          <embed class="cv-preview" src="assets/docs/cv-balykova-kristina.pdf" type="application/pdf">
         </details>
       </section>
       <section id="links" class="section section-links">
         <h2 class="section-title links-title" data-i18n = "links">Links</h2>
         <div class="link-container">
-          <img class="link-icon" src="./assets/img/archive.png">
+          <img class="link-icon" src="assets/img/archive.png">
           <p class="link-description">
             <a href="https://www.ailla.utexas.org/islandora/object/ailla%3A275792" target="_blank" class="link">
               The Guató Collection of Kristina Balykova and Gustavo Godoy | The Archive of the Indigenous Languages of Latin America
@@ -69,7 +69,7 @@
           </p>
         </div>
         <div class="link-container">
-          <img class="link-icon" src="./assets/img/archive.png">
+          <img class="link-icon" src="assets/img/archive.png">
           <p class="link-description">
             <a href="https://ailla.utexas.org/es/islandora/object/ailla%3A279678" target="_blank" class="link">
               The Wa'ikhana Collection of Kristina Balykova | The Archive of the Indigenous Languages of Latin America
@@ -77,7 +77,7 @@
           </p>
         </div>
         <div class="link-container">
-          <img class="link-icon" src="./assets/img/dictionary.jpg">
+          <img class="link-icon" src="assets/img/dictionary.jpg">
           <p class="link-description">
             <a class="link" href="http://japiim.museudoindio.gov.br/dic/guato/" target="_blank">
             Dicionário Guató | Portal Japiim | ProDoclin
@@ -85,7 +85,7 @@
           </p>
         </div>
         <div class="link-container">
-          <img class="link-icon" src="./assets/img/lattes.png">
+          <img class="link-icon" src="assets/img/lattes.png">
           <p class="link-description">
             <a  class="link"href="https://lattes.cnpq.br/9377825900103062" target="_blank">
               Kristina Balykova | Lattes Curriculum Vitae
@@ -93,7 +93,7 @@
           </p>
         </div>
         <div class="link-container">
-          <img class="link-icon" src="./assets/img/academia.edu.png">
+          <img class="link-icon" src="assets/img/academia.edu.png">
           <p class="link-description">
             <a class="link" href="https://utexas.academia.edu/KristinaBalykova" target="_blank">
               Kristina Balykova | Academia.edu
@@ -110,11 +110,11 @@
         <h2 class="section-title" data-i18n = "translations">Translations</h2>
         <details class="translation-container">
           <summary class="translation-details" data-i18n = "translation-1">Desenhos corporais dos índios Kadiweu (Brasil)</summary>
-          <embed class="translation-preview" src="./assets/docs/desenhos-corporais-dos-índios-kadiweu.pdf" type="application/pdf">
+          <embed class="translation-preview" src="assets/docs/desenhos-corporais-dos-índios-kadiweu.pdf" type="application/pdf">
         </details>
         <details class="translation-container">
           <summary class="translation-details" data-i18n = "translation-2">Os Guató e a sua região</summary>
-          <embed class="translation-preview" src="./assets/docs/os-guató-e-a-sua-região.pdf" type="application/pdf">
+          <embed class="translation-preview" src="assets/docs/os-guató-e-a-sua-região.pdf" type="application/pdf">
         </details>
       </section>
       <section id="contacts" class="section section-contacts">
