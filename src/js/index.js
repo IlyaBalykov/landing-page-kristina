@@ -33,7 +33,7 @@ export function authFormHandler(event) {
         Modal.removeModal();
         renderAdminElements();
       } else {
-        alert("Невенрный логин или пароль");
+        alert("Неверный логин или пароль");
       }
     })
 }
