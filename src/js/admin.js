@@ -18,7 +18,6 @@ export function renderAdminElements() {
 
     element.append(removeBtn);
 
-
     removeBtn.addEventListener('click', deleteNews)
   })
 
@@ -32,11 +31,13 @@ export function renderAdminElements() {
 
   function renderNewsForm() {
     return `
-        <label class="input-form__title" for="inputNewsContent">News</label>
-        <textarea id="inputNewsContent" class="input-form__text" rows="8"></textarea>
+      <label class="input-form__title" for="inputNewsContent">News</label>
+      <textarea id="inputNewsContent" class="input-form__text" rows="8"></textarea>
+      <div class = "input-form__keyword">
+        <input id="keyword" class="input-form__keyword-input" type="text" placeholder="type keyword for URL">
+        <input id="url" class="input-form__keyword-url" type="url" placeholder="type URL">
+      </div>
         <input id="submit-news" class="input-form__submit-btn" type="submit" value = "Public">
-        <input id="keyword" class="input-form__keyword" type="text" placeholder="type keyword for URL">
-        <input id="url" class="input-form__link" type="url" placeholder="type URL">
     `
   }
 
@@ -46,9 +47,7 @@ export function renderAdminElements() {
 }
   // Create user menu
 export function showUserMenu() {
-    const headerContainer = document.querySelector(".header-container");
     const loginBtn = document.getElementById("login-btn");
-    const loginMenu = document.createElement("div");
 
     loginBtn.textContent = "Log out";
     
