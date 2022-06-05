@@ -22,6 +22,7 @@ window.onload = function () {
 }
 
 export function authFormHandler(event) {
+  Modal.showWait();
   event.preventDefault();
   const email = event.target.querySelector('#auth-form__email').value;
   const password = event.target.querySelector('#auth-form__password').value;
@@ -30,7 +31,8 @@ export function authFormHandler(event) {
     .then(token => {
       if(token !== undefined) {
         sessionStorage.setItem("userToken", token);
-        Modal.removeModal();
+        Modal.removeAuth();
+        Modal.removeWait()
         renderAdminElements();
       } else {
         alert("Неверный логин или пароль");

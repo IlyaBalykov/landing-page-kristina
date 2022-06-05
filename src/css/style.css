@@ -228,17 +228,59 @@ body {
     font-size: 20px;
     line-height: 30px;
 }
+.new-news {
+    display: flex;
+    flex-direction: column;
+}
 .news-date {
     font-style: italic;
 }
 .news-content {
     text-align: justify;
 }
+.news__delete-btn {
+    width: min-content;
+    height: 30px;
+    align-self: flex-end;
+    font-family: var(--headers-font);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    cursor: pointer;
+}
 
 .news__input-form {
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-top: 20px;
+}
+
+.input-form__title {
+    font-family: var(--headers-font);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.input-form__text {
+    margin-top: 10px;
+    width: 100%;
+    font-family: var(--headers-font);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.input-form__submit-btn {
+    width: 110px;
+    height: 30px;
+    margin-top: 10px;
+    align-self: flex-end;
+    font-family: var(--headers-font);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
 }
 
 .section-translations {
@@ -250,4 +292,56 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+/*modal*/
+.modal {
+    display: none;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(210, 215, 211, .8);
+}
+
+.modal_show {
+    display: flex;
+}
+
+.modal__auth-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    padding: 20px;
+    transform: translate(50%, -50%);
+    background-color: darkgray;
+    border-radius: 4px;
+}
+
+.auth-form__email-title,
+.auth-form__password-title {
+    font-family: var(--headers-font);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.auth-form__email-input,
+.auth-form__password-input {
+    height: 30px;
+    border: none;
+    font-family: var(--headers-font);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.auth-form__login-btn {
+    height: 30px;
+    font-family: var(--headers-font);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
 }

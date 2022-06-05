@@ -25,15 +25,16 @@ export function renderAdminElements() {
   // Add area for make news
   newsForm.id = "form";
   newsForm.classList.add("news__input-form");
+  newsForm.classList.add("input-form");
   newsContainer.append(newsForm);
 
   newsForm.innerHTML = renderNewsForm()
 
   function renderNewsForm() {
     return `
-        <label for="inputNewsContent">Новость</label>
-          <textarea id="inputNewsContent" rows="8"></textarea>
-          <input id="submit-news" type="submit" value = "Опубликовать">
+        <label class="input-form__title" for="inputNewsContent">Новость</label>
+        <textarea id="inputNewsContent" class="input-form__text" rows="8"></textarea>
+        <input id="submit-news" class="input-form__submit-btn" type="submit" value = "Опубликовать">
     `
   }
 
