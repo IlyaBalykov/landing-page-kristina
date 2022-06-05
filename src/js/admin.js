@@ -14,7 +14,7 @@ export function renderAdminElements() {
     const removeBtn = document.createElement("button");
 
     removeBtn.classList.add('news__delete-btn');
-    removeBtn.textContent = "Удалить";
+    removeBtn.textContent = "Delete";
 
     element.append(removeBtn);
 
@@ -32,9 +32,11 @@ export function renderAdminElements() {
 
   function renderNewsForm() {
     return `
-        <label class="input-form__title" for="inputNewsContent">Новость</label>
+        <label class="input-form__title" for="inputNewsContent">News</label>
         <textarea id="inputNewsContent" class="input-form__text" rows="8"></textarea>
-        <input id="submit-news" class="input-form__submit-btn" type="submit" value = "Опубликовать">
+        <input id="submit-news" class="input-form__submit-btn" type="submit" value = "Public">
+        <input id="keyword" class="input-form__keyword" type="text" placeholder="type keyword for URL">
+        <input id="url" class="input-form__link" type="url" placeholder="type URL">
     `
   }
 
