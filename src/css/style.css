@@ -316,7 +316,7 @@ body {
     right: 50%;
     padding: 20px;
     transform: translate(50%, -50%);
-    background-color: darkgray;
+    background-color: whitesmoke;
     border-radius: 4px;
 }
 
@@ -326,22 +326,28 @@ body {
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
+
 }
 
 .auth-form__email-input,
 .auth-form__password-input {
     height: 30px;
+    margin-top: 10px;
     border: none;
+    border-radius: 4px;
     font-family: var(--headers-font);
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
+    background-color: cornsilk;
 }
 
 .auth-form__login-btn {
     height: 30px;
+    margin-top: 10px;
     font-family: var(--headers-font);
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
+    cursor: pointer;
 }

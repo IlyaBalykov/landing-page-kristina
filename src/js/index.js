@@ -31,9 +31,9 @@ export function authFormHandler(event) {
     .then(token => {
       if(token !== undefined) {
         sessionStorage.setItem("userToken", token);
-        Modal.removeAuth();
-        Modal.removeWait()
         renderAdminElements();
+        Modal.removeAuth();
+        Modal.removeWait();
       } else {
         alert("Неверный логин или пароль");
       }

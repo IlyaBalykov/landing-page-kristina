@@ -4,7 +4,7 @@ export function getAuthForm() {
        <label class="auth-form__email-title" for="auth-form__email">E-mail</label>
        <input id="auth-form__email" class="auth-form__email-input" type="email" placeholder="type e-mail" required>
        <label class="auth-form__password-title" for="auth-form__password">Password</label>
-       <input id="auth-form__password" class="auth-form__password-title" type="password" placeholder="type password" required>
+       <input id="auth-form__password" class="auth-form__password-input" type="password" placeholder="type password" required>
        <button class="auth-form__login-btn" type="submit">Log in</button>
      </form>
     `

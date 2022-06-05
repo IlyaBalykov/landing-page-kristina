@@ -4,8 +4,9 @@ import { authFormHandler } from "./index.js";
 export class Modal {
   static showAuth() {
     const modalContainer = document.querySelector('.modal');
+    document.body.style.overflow = "hidden";
     modalContainer.addEventListener('click', (event) => {
-      if (event.target.className.includes("show_modal")) {
+      if (event.target.className.includes("modal_show")) {
         this.removeAuth();
       }
     })
@@ -16,10 +17,11 @@ export class Modal {
       .addEventListener('submit', authFormHandler, { once: true }) //once:true - set event once, because everytime we render auth-form
   }
   
-  static removeAuth () {
+  static removeAuth() {
     const modalContainer = document.querySelector('.modal');
-    const authForm = document.getElementById('auth-form')
-    authForm.remove()
+    const authForm = document.getElementById('auth-form');
+    document.body.style.overflow = "auto";
+    authForm.remove();
     modalContainer.classList.toggle('modal_show');
   }
 
