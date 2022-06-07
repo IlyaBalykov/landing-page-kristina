@@ -21,18 +21,18 @@ window.onload = function () {
   });
 }
 
-export function authFormHandler(event) {
+export async function authFormHandler(event) {
+  Modal.removeAuth()
   Modal.showWait();
   event.preventDefault();
   const email = event.target.querySelector('#auth-form__email').value;
   const password = event.target.querySelector('#auth-form__password').value;
 
-  authWithEmailAndPassword(email ,password)
+  await authWithEmailAndPassword(email ,password)
     .then(token => {
       if(token !== undefined) {
         sessionStorage.setItem("userToken", token);
         renderAdminElements();
-        Modal.removeAuth();
         Modal.removeWait();
       } else {
         alert("Неверный логин или пароль");
@@ -52,5 +52,3 @@ function getTranslate() {
 function loginAction () {
   sessionStorage.getItem("userToken")? hideUserMenu():Modal.showAuth();
 }
-
-// TODO update page when News.submit or News.delete

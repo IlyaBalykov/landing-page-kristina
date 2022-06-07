@@ -35,7 +35,7 @@ export function renderAdminElements() {
       <textarea id="inputNewsContent" class="input-form__text" rows="8"></textarea>
       <div class = "input-form__keyword">
         <input id="keyword" class="input-form__keyword-input" type="text" placeholder="type keyword for URL">
-        <input id="url" class="input-form__keyword-url" type="url" placeholder="type URL">
+        <input id="keyword-url" class="input-form__keyword-url" type="url" placeholder="type URL">
       </div>
         <input id="submit-news" class="input-form__submit-btn" type="submit" value = "Public">
     `
@@ -64,15 +64,21 @@ export function hideUserMenu() {
 
 function submitNews(event) {
   const inputNewsContent = document.getElementById('inputNewsContent');
+  const inputKeyword = document.getElementById('keyword');
+  const inputKeywordUrl = document.getElementById('keyword-url');
   const submitBtn = document.getElementById('submit-news');
   event.preventDefault();
   const news = {
     content: inputNewsContent.value,
+    keyword: inputKeyword.value,
+    keywordUrl: inputKeywordUrl.value,
     date: new Date()
   }
   submitBtn.disabled = true;
   News.create(news).then(() => {
     inputNewsContent.value = '';
+    inputKeyword.value = '';
+    inputKeywordUrl.value = '';
     submitBtn.disabled = false;
   }) //can use create() method, because in news we use static
 

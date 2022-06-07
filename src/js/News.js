@@ -29,9 +29,9 @@ export class News {
         }
         for (let newsId in newsList) {
             const newsContainer = document.createElement("article");
-            const time = document.createElement('time')
+            const time = document.createElement('time');
             const content = document.createElement('p');
-
+            
             newsContainer.className = "new-news";
             newsContainer.dataset.uid = `${newsId}`;
             newsContainer.dataset.lang = "eng";
@@ -41,7 +41,13 @@ export class News {
             time.textContent = `${new Date(newsList[newsId].date).toLocaleDateString()}`;
             
             content.className = "news-content"
-            content.textContent = newsList[newsId].content;
+            if(newsList[newsId].keyword) {
+                const regExpLink = new RegExp(`${newsList[newsId].keyword}`, 'gm')
+                const newsWithLink = `<a href="${newsList[newsId].keywordUrl}">${newsList[newsId].keyword}</a>`;
+                content.innerHTML = newsList[newsId].content.replace(newsList[newsId].keyword, newsWithLink);
+            } else {
+                content.textContent = newsList[newsId].content;
+            }
             newsContainer.append(time, content);
             newsSection.append(newsContainer);
         }

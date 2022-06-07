@@ -9,7 +9,7 @@ export function getAuthForm() {
      </form>
     `
 }
-
+// TODO use refresh token for get new access token when it expired
 export function authWithEmailAndPassword(email, password) {
     const apiKey = 'AIzaSyDu9f4FYbcnOQlLrgo2gKUdYdPreztll0w';
     return fetch(`https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${apiKey}`, {
